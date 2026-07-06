@@ -7,8 +7,11 @@
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-image: linear-gradient(rgba(18, 18, 18, 0.75), rgba(18, 18, 18, 0.75)), url('web cover alt.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             background-color: #121212;
-            color: #ffffff;
             margin: 0;
             padding: 0;
             display: flex;
@@ -19,34 +22,43 @@
         .container {
             text-align: center;
             max-width: 450px;
-            padding: 20px;
+            padding: 30px 20px;
             width: 100%;
+            background: rgba(26, 26, 26, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            box-sizing: border-box;
         }
         .hero-img {
             width: 100%;
-            max-width: 280px;
+            max-width: 240px;
             height: auto;
             border-radius: 12px;
             margin-bottom: 25px;
-            border: 1px solid #2a2a2a;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
         }
-        h1 {
-            font-size: 2rem;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-            text-transform: uppercase;
+        .logo-badge {
+            width: 100%;
+            max-width: 260px; /* Sized perfectly to act as a headline replacement */
+            height: auto;
+            margin-top: 10px;
+            margin-bottom: 8px;
         }
         h2 {
             font-size: 1.1rem;
-            color: #888888;
+            color: #b0b0b0;
             font-weight: 400;
             margin-top: 0;
             margin-bottom: 35px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
         .btn {
             display: block;
-            background-color: #1a1a1a;
+            background-color: rgba(26, 26, 26, 0.85);
             color: #ffffff;
             text-decoration: none;
             padding: 18px;
@@ -54,13 +66,15 @@
             border-radius: 8px;
             font-weight: 600;
             font-size: 1.1rem;
-            border: 1px solid #333333;
+            border: 1px solid rgba(255, 255, 255, 0.15);
             transition: all 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         .btn:hover {
             background-color: #ffffff;
             color: #121212;
             border-color: #ffffff;
+            transform: translateY(-1px);
         }
         .btn-primary {
             background-color: #0076ff;
@@ -71,6 +85,9 @@
             color: #ffffff;
             border-color: #0056b3;
         }
+        .btn:last-child {
+            margin-bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -79,14 +96,14 @@
         <!-- 📸 Flagship Model Asset Showcase -->
         <img src="pfp - tank.jpg" alt="ABA TECH TOYS Modumotors Tank" class="hero-img">
 
-        <!-- Brand Identity -->
-        <h1>ABA TECH TOYS</h1>
+        <!-- 🏷️ Brand Logo Header (Text Alternative) -->
+        <img src="modumotors_logo.png" alt="ABA TECH TOYS" class="logo-badge">
         <h2>Modumotors Modular Vehicle System</h2>
         
-        <!-- Primary Action: Digital Funnel -->
+        <!-- Primary Action -->
         <a href="YOUR_THANGS_URL_HERE" class="btn btn-primary">Download 3D Print Files & Licenses</a>
         
-        <!-- Secondary Action: Local Retail Funnel -->
+        <!-- Secondary Action -->
         <a href="YOUR_RETAIL_DIRECTORY_OR_MAP_URL_HERE" class="btn">Find Local Retail Stockists</a>
     </div>
 
