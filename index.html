@@ -43,7 +43,7 @@
         }
         .logo-badge {
             width: 100%;
-            max-width: 260px; /* Sized perfectly to act as a headline replacement */
+            max-width: 260px;
             height: auto;
             margin-top: 10px;
             margin-bottom: 8px;
@@ -55,38 +55,49 @@
             margin-top: 0;
             margin-bottom: 35px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.5;
         }
-        .btn {
-            display: block;
+        
+        /* Anti-Scrape Contact Info Block Styling */
+        .contact-box {
             background-color: rgba(26, 26, 26, 0.85);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 18px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1.1rem;
             border: 1px solid rgba(255, 255, 255, 0.15);
-            transition: all 0.2s ease;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 25px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            /* Prevents easy scraper selection scripts */
+            user-select: none;
+            -webkit-user-select: none;
         }
-        .btn:hover {
-            background-color: #ffffff;
-            color: #121212;
-            border-color: #ffffff;
-            transform: translateY(-1px);
+        .contact-title {
+            color: #0076ff;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
         }
-        .btn-primary {
-            background-color: #0076ff;
-            border-color: #0076ff;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
+        .contact-item {
             color: #ffffff;
-            border-color: #0056b3;
+            font-size: 1.1rem;
+            margin: 10px 0;
         }
-        .btn:last-child {
-            margin-bottom: 0;
+        .label {
+            color: #888888;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 2px;
+        }
+        
+        /* Trawler protection logic via CSS */
+        .scrambled-email {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            display: inline;
+        }
+        .bot-bait {
+            display: none !important;
         }
     </style>
 </head>
@@ -96,17 +107,28 @@
         <!-- 📸 Flagship Model Asset Showcase -->
         <img src="pfp - tank.jpg" alt="ABA TECH TOYS Modumotors Tank" class="hero-img">
 
-        <!-- 🏷️ Brand Logo Header (Text Alternative) -->
+        <!-- 🏷️ Brand Logo Header -->
         <img src="modumotors_logo.png" alt="ABA TECH TOYS" class="logo-badge">
         <h2>
         Welcome to the world of Modumotors, where you’re not just building vehicles—you’re creating legends. Our Interchangeable Vehicle Customization Kit lets you design, assemble, and dominate the roads with machines built your way. Think it, build it, drive it.
         </h2>
         
-        <!-- Primary Action -->
-        <a href="YOUR_THANGS_URL_HERE" class="btn btn-primary">Download 3D Print Files & Licenses</a>
-        
-        <!-- Secondary Action -->
-        <a href="YOUR_RETAIL_DIRECTORY_OR_MAP_URL_HERE" class="btn">Find Local Retail Stockists</a>
+        <!-- Secure Contact Box (Replaces Old Buttons) -->
+        <div class="contact-box">
+            <div class="contact-title">Get in Touch</div>
+            
+            <div class="contact-item">
+                <span class="label">Email</span>
+                <!-- Write the email completely backwards here inside the span -->
+                <span class="scrambled-email">moc.liameruoy@tcatnoc</span>
+            </div>
+            
+            <div class="contact-item">
+                <span class="label">Phone</span>
+                <!-- Inserting hidden filler characters that confuse automated scanners -->
+                +1 (555) 019<span class="bot-bait">REMOVE-THIS-BOT-TRAWLER</span>-2834
+            </div>
+        </div>
     </div>
 
 </body>
