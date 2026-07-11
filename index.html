@@ -65,8 +65,8 @@
             border-radius: 8px;
             padding: 20px;
             margin-top: 25px;
+            margin-bottom: 30px; /* Space before the catalog image */
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            /* Prevents easy scraper selection scripts */
             user-select: none;
             -webkit-user-select: none;
         }
@@ -90,6 +90,16 @@
             margin-bottom: 2px;
         }
         
+        /* Catalog Image Showcase Styling */
+        .catalog-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            display: block;
+        }
+        
         /* Trawler protection logic via CSS */
         .scrambled-email {
             unicode-bidi: bidi-override;
@@ -110,25 +120,26 @@
         <!-- 🏷️ Brand Logo Header -->
         <img src="modumotors_logo.png" alt="ABA TECH TOYS" class="logo-badge">
         <h2>
-        Welcome to the world of Modumotors, where you’re not just building vehicles—you’re creating legends. Our Interchangeable Vehicle Customization Kit lets you design, assemble, and dominate the roads with machines built your way. Think it, build it, drive it. You can purchase the 3D models to 3d print and assemble. Or you can make a sales request for products.
+        Welcome to the world of Modumotors, where you’re not just building vehicles—you’re creating legends. Our Interchangeable Vehicle Customization Kit lets you design, assemble, and dominate the roads with machines built your way. Think it, build it, drive it. You can purchase the 3D models to 3d print and assemble. Or you can make a sales request for products. Kits contain the parts, instructions, and vehicle lore story!
         </h2>
         
-        <!-- Secure Contact Box (Replaces Old Buttons) -->
+        <!-- Secure Contact Box -->
         <div class="contact-box">
-            <div class="contact-title">For business inquires or purchase of Modumotors products direct from manufacturer</div>
+            <div class="contact-title">For business inquiries or purchase of Modumotors products direct from manufacturer</div>
             
             <div class="contact-item">
-                <span class="label">Contact Email </span>
-                <!-- Write the email completely backwards here inside the span -->
+                <span class="label">Contact Email</span>
                 <span class="scrambled-email">moc.liamg@syothcet.aba</span>
             </div>
             
             <div class="contact-item">
                 <span class="label">Phone</span>
-                <!-- Inserting hidden filler characters that confuse automated scanners -->
                 +1 (506) 440<span class="bot-bait">REMOVE-THIS-BOT-TRAWLER</span>-5847
             </div>
         </div>
+
+        <!-- 📸 Product Catalog Showcase -->
+        <img src="catalog.png" alt="Modumotors Product Catalog" class="catalog-img">
     </div>
 
 </body>
